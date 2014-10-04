@@ -23,5 +23,5 @@ Scenario: No opponent
     Given I am on the homepage
     When I fill in "name" with "Anna"
     And I click on "Play"
-    Then I go to the place_ships page
+    Then I go to the play page
 

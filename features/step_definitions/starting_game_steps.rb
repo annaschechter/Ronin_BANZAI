@@ -22,14 +22,14 @@ When(/^I fill in "(.*?)" with "(.*?)"$/) do |name, text|
   fill_in "name", :with => text
 end
 
-When(/^I click on "(.*?)"$/) do |button|
-  click_on button
+When(/^I choose "(.*?)"$/) do |button|
+  choose button
 end
 
 Then(/^I go to the welcome page$/) do
   visit '/welcome'
 end
 
-Then(/^I go to the place_ships page$/) do
-  visit '/place_ships'
+Then(/^I do to the play page$/) do
+  visit '/play'
 end
