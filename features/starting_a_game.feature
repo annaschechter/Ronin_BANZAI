@@ -11,3 +11,17 @@ Scenario: Empty name
   Given I am on the homepage
   When I don't fill in "name"
   Then I should see "You did not enter a name."
+
+Scenario: No opponent
+    Given I am on the homepage 
+    And there are no opponents
+    When I fill in "name" with "Anna"
+    And I click on "Play"
+    Then I go to the welcome page 
+
+  Scenario: Opponent exists
+    Given I am on the homepage
+    When I fill in "name" with "Anna"
+    And I click on "Play"
+    Then I go to the place_ships page
+
