@@ -11,28 +11,27 @@ Scenario: Waiting for opponent to join
 Scenario: Waiting for opponent to pick
   Given I am on the play page
   And my opponent has not chosen an option yet
-  When I choose "Paper"
+  When I choose "paper"
   And I click "Submit"
   Then I go to the waiting_again page
   And I see "Waiting for opponent to pick"
 
 Scenario: I win
-  Given I am on the waiting_again page
-  And I chose "Paper"
-  And opponent chose "Rock"
+  Given I am on the play page
+  And I chose "paper"
+  And opponent chose "rock"
   Then I go to the finale page
   And I see "Congratulations!!! You won!!!"
 
 Scenario: I loose
-  Given I am on the waiting_again page
-  And I chose "Paper"
-  And opponent chose "Scissors"
+  Given I am on the play page
+  And I chose "paper"
+  And opponent chose "scissors"
   Then I go to the finale page
-  And I see "Sorry you lost. Better luck next time."
+
 
 Scenario: Draw
-  Given I am on the waiting_again page
-  And I chose "Paper"
-  And opponent chose "Paper"
+  Given I am on the play page
+  And I chose "paper"
+  And opponent chose "paper"
   Then I go to the finale page
-  And I see "It's a draw!"

@@ -36,8 +36,8 @@ Given(/^I am on the waiting_again page$/) do
   visit 'waiting_again'
 end
 
-Given(/^I chose "(.*?)"$/) do |option|
-  choose("Paper")
+Given(/^I chose "(.*?)"$/) do |button|
+  choose button
 end
 
 Given(/^opponent chose "(.*?)"$/) do |arg|

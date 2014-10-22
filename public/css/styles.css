@@ -1,0 +1,91 @@
+@import url(http://fonts.googleapis.com/css?family=Lobster);
+
+body {
+	background-image: url(/images/extra_clean_paper.png);
+}
+
+header {
+	background-color: rgb(90, 138, 198);
+	color: white;
+	height: 70px;
+	font-size: 400%;
+}
+
+#options {
+  margin-left: auto;
+  margin-right: auto;
+  width: 59%;
+  padding-top: 5%;
+}
+
+.choices {
+	display: inline;
+	height: 200px;
+	margin: 2%;
+}
+
+main h1 {
+	display: inline-block;
+	font-family: 'Lobster', serif;
+	font-size: 260%;
+	padding-top: 3%;
+	padding-left: 70%; 
+	color: rgb(26, 61, 109);
+}
+
+main h2 {
+	font-family: 'Lobster', serif;
+	font-size: 150%;
+	padding-top: 3%;
+	padding-left: 21.5%;
+	color: rgb(26, 61, 109);
+}
+
+#name-form {
+	padding-left: 21.5%;
+	padding-top: 2%;
+}
+.button {
+	margin: 4px;
+	width: 10px;
+	-moz-box-shadow:inset -3px 9px 19px -1px #f0f7fa;
+	-webkit-box-shadow:inset -3px 9px 19px -1px #f0f7fa;
+	box-shadow:inset -3px 9px 19px -1px #f0f7fa;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #33bdef), color-stop(1, #019ad2));
+	background:-moz-linear-gradient(top, #33bdef 5%, #019ad2 100%);
+	background:-webkit-linear-gradient(top, #33bdef 5%, #019ad2 100%);
+	background:-o-linear-gradient(top, #33bdef 5%, #019ad2 100%);
+	background:-ms-linear-gradient(top, #33bdef 5%, #019ad2 100%);
+	background:linear-gradient(to bottom, #33bdef 5%, #019ad2 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#33bdef', endColorstr='#019ad2',GradientType=0);
+	background-color:#33bdef;
+	-moz-border-radius:17px;
+	-webkit-border-radius:17px;
+	border-radius:17px;
+	border:3px solid #057fd0;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:arial;
+	font-size:15px;
+	padding:8px 30px;
+	text-decoration:none;
+	text-shadow:0px 0px 9px #5b6178;
+}
+.options:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #019ad2), color-stop(1, #33bdef));
+	background:-moz-linear-gradient(top, #019ad2 5%, #33bdef 100%);
+	background:-webkit-linear-gradient(top, #019ad2 5%, #33bdef 100%);
+	background:-o-linear-gradient(top, #019ad2 5%, #33bdef 100%);
+	background:-ms-linear-gradient(top, #019ad2 5%, #33bdef 100%);
+	background:linear-gradient(to bottom, #019ad2 5%, #33bdef 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#019ad2', endColorstr='#33bdef',GradientType=0);
+	background-color:#019ad2;
+}
+.options:active {
+	position:relative;
+	top:1px;
+}
+
+
+

@@ -1,9 +1,9 @@
 <% if (@player == :player1 && GAME.winner == :player1) || (@player == :player2 && GAME.winner == :player2) %>
-	<h1>Congratulations!!! You won!!!</h1>
+	<h2><strong>Congratulations!!! You won!!!</strong></h2>
 <% elsif (@player == :player1 && GAME.winner == :player2) || (@player == :player2 && GAME.winner == :player1) %>
-	<h1>Sorry you lost. Better luck next time.</h1>
+	<h2><strong>Sorry you lost. Better luck next time.</strong></h2>
 <% else %>
-	<h1>It's a draw!</h1>
+	<h2><strong>It's a draw!</strong></h2>
 <% end %>
 
-<a href="/">Start new game</a>
+<a href="/" class="button" >Start new game</a>

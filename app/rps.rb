@@ -1,9 +1,10 @@
 require 'sinatra/base'
-require_relative 'game'
+require_relative 'models/game'
 
 class RPS < Sinatra::Base
 
-  set :views, Proc.new { File.join(root, '..', "views") }
+  set :views, Proc.new { File.join(root, "views") }
+  set :public_folder, Proc.new { File.join(root, "..", "public")}
   enable :sessions
   GAME = Game.new
 
@@ -41,7 +42,7 @@ class RPS < Sinatra::Base
     erb :play
   end
 
-  get '/result' do
+  post '/result' do
     @option = Option.new(params[:object])
 
       if session[:current_player] == :player1
@@ -49,7 +50,6 @@ class RPS < Sinatra::Base
       else
         GAME.player2.pick(@option)
       end
-
     redirect '/waiting_again'
   end
 
