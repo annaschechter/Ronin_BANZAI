@@ -44,7 +44,7 @@ class RPS < Sinatra::Base
 
   post '/result' do
     @option = Option.new(params[:object])
-
+    raise params[:object].inspect
       if session[:current_player] == :player1
         GAME.player1.pick(@option)
       else

@@ -1,4 +1,4 @@
-require 'option'
+require './app/models/option'
 
 describe Option do
 	

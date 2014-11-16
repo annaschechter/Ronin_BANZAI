@@ -16,22 +16,18 @@ Scenario: Waiting for opponent to pick
   Then I go to the waiting_again page
   And I see "Waiting for opponent to pick"
 
-Scenario: I win
+Scenario: I chose paper
   Given I am on the play page
   And I chose "paper"
-  And opponent chose "rock"
-  Then I go to the finale page
-  And I see "Congratulations!!! You won!!!"
+  Then I go to the next page
 
-Scenario: I loose
+Scenario: I chose rock
   Given I am on the play page
-  And I chose "paper"
-  And opponent chose "scissors"
-  Then I go to the finale page
+  And I chose "rock"
+  Then I go to the next page
 
 
-Scenario: Draw
+Scenario: I chose scissors
   Given I am on the play page
-  And I chose "paper"
-  And opponent chose "paper"
-  Then I go to the finale page
+  And I chose "scissors"
+  Then I go to the next page

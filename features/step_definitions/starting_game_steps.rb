@@ -22,9 +22,6 @@ When(/^I fill in "(.*?)" with "(.*?)"$/) do |name, text|
   fill_in "name", :with => text
 end
 
-When(/^I choose "(.*?)"$/) do |button|
-  choose button
-end
 
 Then(/^I go to the welcome page$/) do
   visit '/welcome'
