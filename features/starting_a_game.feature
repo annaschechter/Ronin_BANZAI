@@ -21,6 +21,7 @@ Scenario: No opponent
 
   Scenario: Opponent exists
     Given I am on the homepage
+    And an oponent exists
     When I fill in "name" with "Anna"
     And I click on "Play"
     Then I go to the play page

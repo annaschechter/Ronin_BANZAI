@@ -1,3 +1,10 @@
+def in_browser(name)
+  old_session = Capybara.session_name
+  Capybara.session_name = name
+  yield
+  Capybara.session_name = old_session
+end
+
 Given(/^I am on the homepage$/) do
   visit '/'
 end
@@ -27,6 +34,20 @@ Then(/^I go to the welcome page$/) do
   visit '/welcome'
 end
 
-Then(/^I do to the play page$/) do
+Then(/^I go to the play page$/) do
   visit '/play'
+end
+
+Given(/^an oponent exists$/) do
+  in_browser(:two) do
+  visit '/'
+  fill_in "name", :with => "Anna"
+ 	click_on "Play"
+ end
+end
+
+When(/^I click on "(.*?)"$/) do |button|
+  in_browser(:one) do
+  click_on button
+  end
 end

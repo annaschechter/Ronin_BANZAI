@@ -6,6 +6,7 @@ class RPS < Sinatra::Base
   set :views, Proc.new { File.join(root, "views") }
   set :public_folder, Proc.new { File.join(root, "..", "public")}
   enable :sessions
+
   GAME = Game.new
 
   get '/' do
@@ -22,19 +23,13 @@ class RPS < Sinatra::Base
     player = Player.new
     player.name = params[:name]
     GAME.add_player(player)
-
-      if GAME.has_two_players?
-        session[:current_player] = :player2
-      else
-        session[:current_player] = :player1
-      end
-
+    session[:current_player] = player.object_id
     redirect '/waiting'
   end
 
   get '/waiting' do
     redirect '/play' if GAME.has_two_players?
-    @name = session[:name]
+    @name = GAME.find_player_by(session[:current_player]).name
     erb :waiting
   end
 
@@ -43,13 +38,8 @@ class RPS < Sinatra::Base
   end
 
   post '/result' do
-    @option = Option.new(params[:object])
-    raise params[:object].inspect
-      if session[:current_player] == :player1
-        GAME.player1.pick(@option)
-      else
-        GAME.player2.pick(@option)
-      end
+    @option = Option.new(params[:weapon])
+    GAME.find_player_by(session[:current_player]).pick(@option)
     redirect '/waiting_again'
   end
 
@@ -61,6 +51,10 @@ class RPS < Sinatra::Base
   get '/finale' do
     @player = session[:current_player]
     erb :finale
+  end
+
+  get '/show_game' do
+    raise GAME.inspect
   end
 
   # start the server if ruby file executed directly

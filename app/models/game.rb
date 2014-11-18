@@ -36,6 +36,21 @@ class Game
        return :player2
     end
 
+    def players
+      [player1, player2]
+    end
 
-
+    def find_player_by(player_object_id)
+      players.select{|player| player.object_id == player_object_id }.first
+    end
 end
+
+
+
+
+
+
+
+
+
+
