@@ -10,6 +10,7 @@ require 'rspec'
 
 Capybara.app = RPS
 
+
 class RPSWorld
   include Capybara::DSL
   include RSpec::Expectations

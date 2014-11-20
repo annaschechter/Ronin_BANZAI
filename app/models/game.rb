@@ -26,22 +26,20 @@ class Game
         has_two_players? && both_players_played
     end
 
-
-
     def winner
-       return :draw if @player1.option.name == @player2.option.name
-       return :player1 if @player1.option.name == :rock && @player2.option.name == :scissors
-       return :player1 if @player1.option.name == :scissors && @player2.option.name == :paper
-       return :player1 if @player1.option.name == :paper && @player2.option.name == :rock
-       return :player2
+       return nil if @player1.option.name == @player2.option.name
+       return @player1 if @player1.option.name == :rock && @player2.option.name == :scissors
+       return @player1 if @player1.option.name == :scissors && @player2.option.name == :paper
+       return @player1 if @player1.option.name == :paper && @player2.option.name == :rock
+       return @player2
     end
 
     def players
-      [player1, player2]
+      [@player1, @player2]
     end
 
     def find_player_by(player_object_id)
-      players.select{|player| player.object_id == player_object_id }.first
+      return players.select{|player| player.object_id == player_object_id }.first
     end
 end
 

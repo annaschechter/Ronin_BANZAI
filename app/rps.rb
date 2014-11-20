@@ -29,7 +29,7 @@ class RPS < Sinatra::Base
 
   get '/waiting' do
     redirect '/play' if GAME.has_two_players?
-    @name = GAME.find_player_by(session[:current_player]).name
+    @name = session[:name]
     erb :waiting
   end
 
@@ -39,7 +39,8 @@ class RPS < Sinatra::Base
 
   post '/result' do
     @option = Option.new(params[:weapon])
-    GAME.find_player_by(session[:current_player]).pick(@option)
+    @player = GAME.find_player_by(session[:current_player])
+    @player.pick(@option)
     redirect '/waiting_again'
   end
 
@@ -51,10 +52,6 @@ class RPS < Sinatra::Base
   get '/finale' do
     @player = session[:current_player]
     erb :finale
-  end
-
-  get '/show_game' do
-    raise GAME.inspect
   end
 
   # start the server if ruby file executed directly
