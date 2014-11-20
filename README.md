@@ -17,6 +17,8 @@ Languages and Tools
 * RSpec
 * Cucumber
 * Capybara
+* HTML
+* CSS
 
 How to use
 ----------
@@ -40,4 +42,4 @@ Rackup:
 ```
 $ rackup
 ```
-In your browser visit http://localhost:9292/ to play!
+In your browser visit http://localhost:9292/ to play! To register as a second player visit http://localhost:9292/ in a **different browser**.
