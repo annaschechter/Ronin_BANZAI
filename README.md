@@ -10,6 +10,8 @@ Rock, Paper, Scissors is a two player online game with the following features:
 * each player will choose one option
 * a winner will be declared
 
+<img src="https://s3-eu-west-1.amazonaws.com/annas-first-test-bucket/rps.png">
+
 Languages and Tools
 -------------------
 * Ruby

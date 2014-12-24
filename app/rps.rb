@@ -11,6 +11,7 @@ class RPS < Sinatra::Base
 
   get '/' do
   	@name = session[:name]
+    GAME.reset if GAME.has_two_players?
     erb :index
   end
 

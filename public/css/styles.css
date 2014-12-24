@@ -7,8 +7,8 @@ body {
 header {
 	background-color: rgb(90, 138, 198);
 	color: white;
-	height: 70px;
-	font-size: 400%;
+	height: 10vw;
+	font-size: 10vw;
 }
 
 #options {
@@ -25,9 +25,9 @@ header {
 }
 
 main h1 {
-	display: inline-block;
+/*	display: block;*/
 	font-family: 'Lobster', serif;
-	font-size: 260%;
+	font-size: 5vw;
 	padding-top: 3%;
 	padding-left: 70%; 
 	color: rgb(26, 61, 109);
@@ -35,7 +35,7 @@ main h1 {
 
 main h2 {
 	font-family: 'Lobster', serif;
-	font-size: 150%;
+	font-size: 3vw;
 	padding-top: 3%;
 	padding-left: 21.5%;
 	color: rgb(26, 61, 109);
@@ -46,7 +46,6 @@ main h2 {
 	padding-top: 2%;
 }
 .button {
-/*	margin: 4px;*/
 	width: 17px;
 	-moz-box-shadow:inset -3px 9px 19px -1px #f0f7fa;
 	-webkit-box-shadow:inset -3px 9px 19px -1px #f0f7fa;
@@ -85,6 +84,37 @@ main h2 {
 .options:active {
 	position:relative;
 	top:1px;
+}
+
+#rock {
+	height: 10vw;
+	width: 10vw;
+	background-image: url('../images/rock.png');
+	background-size: 110%;
+	text-align: left;
+	color: black;
+	background-repeat: no-repeat;
+	text-vertical-align: top;
+}
+
+#paper {
+	height: 10vw;
+	width: 10vw;
+	background-image: url('../images/paper.png');
+	background-size: 110%;
+	text-align: left;
+	color: black;
+	background-repeat: no-repeat;
+}
+
+#scissors {
+	height: 10vw;
+	width: 10vw;
+	background-image: url('../images/scissors.png');
+	background-size: 110%;
+	text-align: left;
+	color: black;
+	background-repeat: no-repeat;
 }
 
 
